@@ -61,7 +61,6 @@ class Recurring implements InstallSchemaInterface
         $abandonedCartTableName = $setup->getTable('email_abandoned_cart');
 
         if (version_compare($context->getVersion(), '2.3.8', '>') &&
-            version_compare($context->getVersion(), '2.4.5', '<') &&
             ! $connection->isTableExists($abandonedCartTableName)
         ) {
             $abandonedCartTable = $connection->newTable($abandonedCartTableName);
